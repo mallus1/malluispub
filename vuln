@@ -14,3 +14,7 @@ app.get("/fetch", async (req, res) => {
     res.status(500).send("Internal Server Error");
   }
 });
+
+secret={
+  "Authorization": "Bearer ghp_iBHtryrtryfgvgrfllsbhhdcvhdbhdCjhadET2M1bhw"
+}
