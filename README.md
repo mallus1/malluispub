@@ -1,9 +1,7 @@
 # malluispub
 #vuln code
 - 
-{
-  "Authorization": "Bearer ghp_iBHtryrtryfgvgrfllsbhhdcvhdbhdCjhadET2M1bhw"
-}
+
 <?php
 if (isset($_GET['url'])) {
   $url = $_GET['url'];
