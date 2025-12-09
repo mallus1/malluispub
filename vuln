@@ -1,11 +1,16 @@
 //new
 
-<?php
-if (isset($_GET['url'])) {
-  $url = $_GET['url'];
-  // Attacker has full control over the 'url' parameter
-  $image = fopen($url, 'rb');
-  header("Content-Type: image/png");
-  fpassthru($image);
-}
-?>
+const express = require('express');
+const axios = require('axios');
+const app = express();
+
+app.get("/fetch", async (req, res) => {
+  const url = req.query.url; // Untrusted input
+  try {
+    const response = await axios.get(url); // Request made to attacker-controlled URL
+    res.send("Upload Successful");
+  } catch (error) {
+    console.error("Error:", error.message);
+    res.status(500).send("Internal Server Error");
+  }
+});
