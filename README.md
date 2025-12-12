@@ -11,3 +11,11 @@ if (isset($_GET['url'])) {
   fpassthru($image);
 }
 ?>
+secret={
+
+
+
+  "Authorization": "Bearer ghp_iBHtryrtryfgvgrfllsbhhdcvhdbhdCjhadET2M1bhw"
+
+
+}
